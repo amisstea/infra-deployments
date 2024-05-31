@@ -10,4 +10,4 @@ spec:
   budget: 100
   allowedTemplates:
     - name: hypershift-aws-cluster
-      deleteAfter: 2h
+      deleteAfter: 24h
