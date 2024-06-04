@@ -4,6 +4,7 @@ metadata:
   name: spacerequest-cleaner
   namespace: spacerequest-cleaner
 spec:
+  suspend: true
   schedule: "0 4 * * *" # every day at 4AM UTC
   jobTemplate:
     spec:
