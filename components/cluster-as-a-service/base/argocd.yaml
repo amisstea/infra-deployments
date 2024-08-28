@@ -8,3 +8,8 @@ metadata:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   resourceTrackingMethod: annotation
+  rbac:
+    policy:
+      value: |
+        g, system:cluster-admins, role:admin
+        g, system:authenticated, role:readonly
