@@ -35,8 +35,8 @@ spec:
       project: default
       source:
         chart: hypershift-aws-template
-        repoURL: https://konflux-ci.dev/cluster-template-charts/
-        targetRevision: 0.0.3
+        repoURL: https://amisstea.github.io/cluster-template-charts/
+        targetRevision: 0.0.5
         helm:
           parameters:
             - name: region
@@ -46,7 +46,7 @@ spec:
             - name: serviceAccount
               value: cluster-provisioner
             - name: hypershiftImageTag
-              value: "4.14"
+              value: "4.16"
             - name: nodePoolReplicas
               value: "3"
       syncPolicy:
