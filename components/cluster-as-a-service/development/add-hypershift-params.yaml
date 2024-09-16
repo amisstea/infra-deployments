@@ -3,16 +3,14 @@
   path: /spec/template/spec/source/helm/parameters/-
   value:
     name: baseDomain
-    value: ""
-
+    value: "eaasdemo.com"
 - op: add
   path: /spec/template/spec/source/helm/parameters/-
   value:
     name: hypershiftImageTag
     value: "4.16"
-
 - op: add
   path: /spec/template/spec/source/helm/parameters/-
   value:
     name: hypershiftRoleArn
-    value: ""
+    value: "arn:aws:iam::489668258961:role/amisstea-hypershift-cli-role"
