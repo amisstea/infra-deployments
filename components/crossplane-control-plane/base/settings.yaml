@@ -1,6 +1,0 @@
-securityContextCrossplane:
-  runAsUser: null
-  runAsGroup: null
-securityContextRBACManager:
-  runAsUser: null
-  runAsGroup: null

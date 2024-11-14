@@ -1,9 +1,8 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: crossplane-control-plane
-  labels:
-    noSourceTransform: "true"
 spec:
   generators:
     - merge:
@@ -23,16 +22,9 @@ spec:
     spec:
       project: default
       source:
-        chart: crossplane
-        repoURL: https://charts.crossplane.io/stable
-        targetRevision: 1.18.0
-        helm:
-          values: |
-            securityContext:
-            allowPrivilegeEscalation: false
-            readOnlyRootFilesystem: true
-            runAsGroup: 1001100001
-            runAsUser: 1001100001
+        path: '{{values.sourceRoot}}/{{values.environment}}/{{values.clusterDir}}'
+        repoURL: https://github.com/redhat-appstudio/infra-deployments.git
+        targetRevision: main
       destination:
         namespace: crossplane-system
         server: '{{server}}'
