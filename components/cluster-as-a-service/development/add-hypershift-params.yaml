@@ -3,20 +3,17 @@
   path: /spec/template/spec/source/helm/parameters/-
   value:
     name: baseDomain
-    value: ""
-
+    value: "eaasdemo.com"
 - op: add
   path: /spec/template/spec/source/helm/parameters/-
   value:
     name: hypershiftImage
     value: registry.redhat.io/multicluster-engine/hypershift-rhel9-operator:v2.10@sha256:1cceec46246ea7bef481549dce1ce91880d19a5650c9a6bc0f71f0d4092a6f95
-
 - op: add
   path: /spec/template/spec/source/helm/parameters/-
   value:
     name: hypershiftRoleArn
-    value: ""
-
+    value: "arn:aws:iam::489668258961:role/amisstea-hypershift-cli-role"
 - op: replace
   path: /spec/template/spec/source/targetRevision
   value: 0.1.9
